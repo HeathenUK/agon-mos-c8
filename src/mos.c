@@ -1593,8 +1593,7 @@ UINT24 mos_REN(char *srcPath, char *dstPath, BOOL verbose) {
         }
         usePattern = TRUE;
     } else {
-        srcDir = mos_strdup(srcPath);
-        if (!srcDir) return FR_INT_ERR; // Out of memory
+        srcDir = srcPath;
         usePattern = FALSE;
     }
 
