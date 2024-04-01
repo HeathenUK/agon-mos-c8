@@ -1461,7 +1461,10 @@ UINT24 mos_DIR(char* inputPath, BOOL longListing) {
             if (!usePattern && filinfo.fname[0] == 0)
                 break;
         }
-    }
+    } else {
+		goto cleanup;
+		
+	}
     f_closedir(&dir);
 
     num_dirents = fno_num;
